@@ -2,4 +2,4 @@ package desafio.itau.api.model
 
 import java.time.OffsetDateTime
 
-class Transacao(private val valor: Double, private val dataHora: OffsetDateTime)
+class Transacao(val valor: Double, val dataHora: OffsetDateTime)

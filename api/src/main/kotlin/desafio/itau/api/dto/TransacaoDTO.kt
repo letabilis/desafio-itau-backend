@@ -7,4 +7,4 @@ import java.time.OffsetDateTime
 // O que a API pode saber do modelo?
 // Aplicar alguns constraints
 
-class TransacaoDTO(@NotNull @Min(0) private val valor: Double, @NotNull private val dataHora: OffsetDateTime)
+class TransacaoDTO(@NotNull @Min(0) val valor: Double, @NotNull  val dataHora: OffsetDateTime)
