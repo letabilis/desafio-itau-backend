@@ -18,7 +18,7 @@ class TransacaoController (val transacaoService: TransacaoService){
     @PostMapping
     fun request(@Valid @RequestBody  t: TransacaoDTO): ResponseEntity<Void> {
         val agora = OffsetDateTime.now()
-        if (t.dataHora.isAfter(agora)) {
+        if (t.dataHora.isAfter(agora) || t.valor < 0) {
             return ResponseEntity.unprocessableEntity().build()
         }
         this.transacaoService.addTransacao(t)
