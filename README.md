@@ -131,3 +131,14 @@ Vamos propôr a seguir alguns desafios extras caso você queira testar seus conh
 7. **Documentação da API:** Você consegue documentar sua API? Existem [ferramentas](https://swagger.io/) e [padrões](http://raml.org/) que podem te ajudar com isso!
 8. **Documentação do Sistema:** Sua aplicação provavelmente precisa ser construída antes de ser executada. Você consegue documentar como outra pessoa que pegou sua aplicação pela primeira vez pode construir e executar sua aplicação?
 9. **Configurações:** Você consegue deixar sua aplicação configurável em relação a quantidade de segundos para calcular as estatísticas? Por exemplo: o padrão é 60 segundos, mas e se o usuário quiser 120 segundos?
+
+## 5. Minhas Referências para resolver este problema
+1. **Spring Controllers** https://www.baeldung.com/spring-controllers
+2. **Padrão DTO** https://www.dio.me/articles/dto-data-transfer-object
+3. **Objeto OffsetDateTime** https://developer.android.com/reference/java/time/OffsetDateTime#minusMinutes(long)
+4. **Classes em Kotlin** https://kotlinlang.org/docs/classes.html
+5. **Atributos em Kotlin** https://kotlinlang.org/docs/properties.html#getters-and-setters
+6. **Objeto DoubleSummaryStatistics** https://docs.oracle.com/javase/8/docs/api/java/util/DoubleSummaryStatistics.html
+7. **Filter em Kotlin** https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/filter.html
+8. **Maps em Kotlin** https://www.baeldung.com/kotlin/maps
+9. **BlockingQueue em Kotlin** https://developer.android.com/reference/java/util/concurrent/BlockingQueue
