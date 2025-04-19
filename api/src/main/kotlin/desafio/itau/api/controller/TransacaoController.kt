@@ -2,8 +2,10 @@ package desafio.itau.api.controller
 
 import desafio.itau.api.dto.TransacaoDTO
 import desafio.itau.api.service.TransacaoService
+import jakarta.validation.Valid
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import java.time.OffsetDateTime
@@ -14,7 +16,7 @@ import java.time.OffsetDateTime
 class TransacaoController (val transacaoService: TransacaoService){
 
     @PostMapping
-    fun request(t: TransacaoDTO): ResponseEntity<Void> {
+    fun request(@Valid @RequestBody  t: TransacaoDTO): ResponseEntity<Void> {
         val agora = OffsetDateTime.now()
         if (t.dataHora.isAfter(agora)) {
             return ResponseEntity.unprocessableEntity().build()
