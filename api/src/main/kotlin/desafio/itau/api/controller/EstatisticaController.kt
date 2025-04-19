@@ -2,6 +2,7 @@ package desafio.itau.api.controller
 
 import desafio.itau.api.dto.EstatisticaDTO
 import desafio.itau.api.service.TransacaoService
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -12,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController
 class EstatisticaController (val transacaoService: TransacaoService){
 
     @GetMapping
-    fun response(): EstatisticaDTO {
+    fun response(): ResponseEntity<EstatisticaDTO> {
         val estatistica = EstatisticaDTO(transacaoService.getEstatisticas())
-        return estatistica
+        return ResponseEntity.ok(estatistica)
     }
 }
