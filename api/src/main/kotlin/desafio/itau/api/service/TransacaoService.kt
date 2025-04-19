@@ -10,6 +10,15 @@ import java.util.stream.Collectors
 
 @Service
 class TransacaoService(var transacoes: BlockingQueue<TransacaoDTO>) {
+
+    fun addTransacao(t: TransacaoDTO) {
+        this.transacoes.add(t)
+    }
+
+    fun limparTransacoes() {
+        this.transacoes.clear()
+    }
+
     fun getEstatisticas(): DoubleSummaryStatistics {
         val agora: OffsetDateTime = OffsetDateTime.now()
         val transacoesAlvo = this.transacoes.filter { t -> t.dataHora.isBefore(agora.minusMinutes(1))}
