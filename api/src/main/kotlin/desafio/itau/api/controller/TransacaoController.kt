@@ -10,10 +10,10 @@ import java.time.OffsetDateTime
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/transacao")
 class TransacaoController (val transacaoService: TransacaoService){
 
-    @PostMapping("/transacao")
+    @PostMapping
     fun request(t: TransacaoDTO): ResponseEntity<Void> {
         val agora = OffsetDateTime.now()
         if (t.dataHora.isAfter(agora)) {

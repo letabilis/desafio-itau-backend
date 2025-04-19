@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController
 
 
 @RestController
-@RequestMapping
+@RequestMapping("/estatistica")
 class EstatisticaController (val transacaoService: TransacaoService){
 
-    @GetMapping("/estatistica")
+    @GetMapping
     fun response(): EstatisticaDTO {
         val estatistica = EstatisticaDTO(transacaoService.getEstatisticas())
         return estatistica
