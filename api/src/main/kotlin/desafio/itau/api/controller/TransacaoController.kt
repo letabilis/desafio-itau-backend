@@ -22,6 +22,6 @@ class TransacaoController (val transacaoService: TransacaoService){
             return ResponseEntity.unprocessableEntity().build()
         }
         this.transacaoService.addTransacao(t)
-        return ResponseEntity.ok().build()
+        return ResponseEntity.status(201).build()
     }
 }
